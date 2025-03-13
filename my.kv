@@ -1,0 +1,82 @@
+#:kivy 2.0.0
+
+<FirstScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: 'backgr_sc_1.png'
+
+        Image:
+            source: 'logo_sc_1.png'  # Укажите путь к вашему изображению
+            pos: 0, 0
+            size_hint: None, None
+            size_hint: (1, 1)
+
+
+        Image:
+            source: 'label_sc_1.png'  # Укажите путь к вашему изображению
+            size_hint: (1, 0.7)
+            pos: 0, 0
+
+
+<SecondScreen>:
+    on_touch_down: root.manager.current = 'third'
+    BoxLayout:
+        orientation: 'vertical'
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: 'backgr_sc_2.png'
+
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: 'backnagr_sc_2.png'
+
+<ThirdScreen>:
+    on_touch_down: root.manager.current = 'fourth'
+    BoxLayout:
+        orientation: 'vertical'
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: 'backgr_sc_3.png'
+
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: 'backnagr_sc_3.png'
+
+
+<FourthScreen>:
+    on_touch_down: root.manager.current = 'register'
+    BoxLayout:
+        orientation: 'vertical'
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: 'backgr_sc_4.png'
+
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: 'backnagr_sc_4.png'
+
+
+<RegisterScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: ''
